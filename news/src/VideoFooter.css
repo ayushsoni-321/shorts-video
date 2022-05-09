@@ -1,6 +1,6 @@
 .videoFooter {
     position: relative;
-    bottom: 100px;
+    bottom: 150px;
     color: white;
     display: flex;
 }
@@ -12,6 +12,18 @@
     animation: spinTheRecord infinite 5s linear;
     height: 50px;
     filter: invert(1);
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+.videoFooter__icon{
+    position: absolute;
+}
+.videoFooter__text > h3 {
+    padding-bottom: 20px;
+}
+.videoFooter__ticker h1 {
+    padding-top: 7px;
 }
 @keyframes spinTheRecord {
     from {

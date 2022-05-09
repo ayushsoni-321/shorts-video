@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import VideoFooter from './VideoFooter';
+import VideoSidebar from './VideoSidebar';
 import './Video.css';
-import VideoPlayer from "react-video-js-player";
-import ayush from "./images/ayush.mp4";
+
 
 function Video(){
     const [playing, setPlaying] = useState(false);
@@ -19,12 +19,15 @@ function Video(){
     };
     return (
         <div className="video">
-            <h1>Videos</h1>
-            <VideoPlayer
-               src="D:\news\news\src\images\ayush.mp4"
-              
-               />
-            {/* <VideoFooter /> */}
+            <video
+             className="video__player"
+             loop
+             onClick={onVideoPress}
+            ref={videoRef}
+             src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            ></video>
+            <VideoFooter channel="rafehqazi" description="Check out this dance" song="Usher - Yeah"/>
+            <VideoSidebar />
             {/* <VideoSidebar /> /> */}
         </div>
     );
